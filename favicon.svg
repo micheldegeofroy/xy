@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <g stroke="#111111" stroke-width="25" stroke-linecap="butt" stroke-linejoin="miter">
-    <path d="M20 16 L80 84"/>
-    <path d="M80 16 L20 84"/>
+  <circle cx="50" cy="50" r="50" fill="#ffffff"/>
+  <g stroke="#111111" stroke-width="20" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M28 28 L72 72"/>
+    <path d="M72 28 L28 72"/>
   </g>
 </svg>
