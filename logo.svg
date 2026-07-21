@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 160" fill="none" role="img" aria-label="XY">
-  <g stroke="currentColor" stroke-width="27" stroke-linecap="butt" stroke-linejoin="miter">
-    <path d="M18 24 L94 138"/>
-    <path d="M94 24 L18 138"/>
-    <path d="M140 138 L140 84 L106 40"/>
-    <path d="M140 84 L182 36"/>
-  </g>
-  <path d="M203 14 L176 22 L189 49 Z" fill="currentColor"/>
-</svg>

@@ -6,12 +6,12 @@
 <title>XY Masculinism — The Advocacy of Men's Rights</title>
 <meta name="description" content="Masculinism: the advocacy of men's rights — grounded in equal rights, equal responsibilities, equal opportunities and equal protections under the law. A just world for all." />
 <meta name="theme-color" content="#0a0a0a" />
-<link rel="icon" href="logo.svg" type="image/svg+xml" />
+<link rel="icon" href="logo.png" type="image/png" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="XY Masculinism — The Advocacy of Men's Rights" />
 <meta property="og:description" content="Equal rights. Equal responsibilities. Equal opportunities. Equal protections. A just world for all." />
 <meta property="og:url" content="https://xy.net/" />
-<meta property="og:image" content="https://xy.net/logo.svg" />
+<meta property="og:image" content="https://xy.net/logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <style>
   :root{
@@ -39,7 +39,7 @@
   }
   .nav .wrap{display:flex; align-items:center; gap:20px; height:66px}
   .brand{display:flex; align-items:center; gap:11px; text-decoration:none; font-weight:800}
-  .brand svg{width:38px; height:29px; color:var(--ink)}
+  .brand img.brandimg{height:32px; width:auto; display:block}
   .brand b{font-size:1.15rem; letter-spacing:.02em}
   .brand span{font-weight:600; color:var(--muted); font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; display:none}
   nav.links{margin-left:auto; display:flex; gap:26px; align-items:center}
@@ -56,7 +56,7 @@
   /* HERO */
   .hero{padding:76px 0 54px; border-bottom:3px solid var(--rule)}
   .hero .lock{display:flex; align-items:center; gap:26px; flex-wrap:wrap}
-  .hero .mark{width:118px; height:90px; color:var(--ink); flex:0 0 auto}
+  .hero img.mark{height:104px; width:auto; flex:0 0 auto}
   .hero .title h1{font-size:clamp(2.6rem,7vw,4.6rem); font-weight:800; line-height:.92; letter-spacing:-.02em}
   .hero .title .sub{font-size:clamp(1rem,2.6vw,1.5rem); font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#222; margin-top:10px}
   .hero .def{margin-top:30px; max-width:760px}
@@ -134,20 +134,7 @@
   footer.foot .brand{justify-content:center; margin-bottom:12px}
   footer.foot a{color:var(--muted)}
 
-  /* dark scheme adaptation (brand is monochrome, so invert cleanly) */
-  @media (prefers-color-scheme: dark){
-    :root{--paper:#0c0c0c; --ink:#f4f4f4; --muted:#9a9a9a; --line:#242424; --rule:#f4f4f4}
-    body{background:var(--paper); color:var(--ink)}
-    header.nav{background:rgba(12,12,12,.9); border-bottom-color:var(--line)}
-    nav.links a{color:#cfcfcf}
-    .card{border-color:var(--line)}
-    .lead,.prin p,.card li,.commit p,.vision p,.hero .intro{color:#c9c9c9}
-    .philo{background:#f4f4f4; color:#0c0c0c}
-    .philo .badge{background:#0c0c0c;color:#f4f4f4}
-    .philo .lines p{color:#0c0c0c}
-    .banner{background:#f4f4f4;color:#0c0c0c}
-    ul.vals li::before,.card li::before{background:currentColor}
-  }
+  /* light-only: the brand identity (and logo) is black on white, matching the posters */
 </style>
 </head>
 <body>
@@ -179,7 +166,7 @@
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="XY Masculinism home">
-      <svg viewBox="0 0 210 160" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="27" stroke-linecap="butt" stroke-linejoin="miter"><path d="M18 24 L94 138"/><path d="M94 24 L18 138"/><path d="M140 138 L140 84 L106 40"/><path d="M140 84 L182 36"/></g><path d="M203 14 L176 22 L189 49 Z" fill="currentColor"/></svg>
+      <img src="logo.png" class="brandimg" alt="XY logo" />
       <b>XY</b><span>Masculinism</span>
     </a>
     <nav class="links">
@@ -198,7 +185,7 @@
   <section class="hero" style="border-bottom:3px solid var(--rule)">
     <div class="wrap">
       <div class="lock">
-        <svg class="mark" viewBox="0 0 210 160" fill="none" aria-label="XY logo"><g stroke="currentColor" stroke-width="27" stroke-linecap="butt" stroke-linejoin="miter"><path d="M18 24 L94 138"/><path d="M94 24 L18 138"/><path d="M140 138 L140 84 L106 40"/><path d="M140 84 L182 36"/></g><path d="M203 14 L176 22 L189 49 Z" fill="currentColor"/></svg>
+        <img src="logo.png" class="mark" alt="XY logo" />
         <div class="title">
           <h1>MASCULINISM</h1>
           <div class="sub">The Advocacy of Men's Rights</div>
@@ -437,7 +424,7 @@
 <footer class="foot">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="XY">
-      <svg viewBox="0 0 210 160" fill="none" aria-hidden="true" style="width:34px;height:26px"><g stroke="currentColor" stroke-width="27" stroke-linecap="butt" stroke-linejoin="miter"><path d="M18 24 L94 138"/><path d="M94 24 L18 138"/><path d="M140 138 L140 84 L106 40"/><path d="M140 84 L182 36"/></g><path d="M203 14 L176 22 L189 49 Z" fill="currentColor"/></svg>
+      <img src="logo.png" class="brandimg" alt="XY logo" style="height:30px" />
     </a>
     <p>XY Masculinism &mdash; The Advocacy of Men's Rights. Secular. Peaceful. Lawful.</p>
     <p>&copy; <span id="yr"></span> XY Masculinism. A just world for all.</p>
