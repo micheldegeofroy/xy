@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>XY Masculinism — The Advocacy of Men's Rights</title>
+<meta name="description" content="Masculinism: the advocacy of men's rights — grounded in equal rights, equal responsibilities, equal opportunities and equal protections under the law. A just world for all." />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="icon" href="logo.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="XY Masculinism — The Advocacy of Men's Rights" />
+<meta property="og:description" content="Equal rights. Equal responsibilities. Equal opportunities. Equal protections. A just world for all." />
+<meta property="og:url" content="https://xy.net/" />
+<meta property="og:image" content="https://xy.net/logo.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<style>
+  :root{
+    --ink:#0a0a0a; --paper:#ffffff; --muted:#5a5a5a; --line:#e4e4e4;
+    --rule:#111; --band:#0a0a0a; --maxw:1120px;
+    --sans:"Helvetica Neue",Helvetica,Arial,"Segoe UI",Roboto,system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+  a{color:inherit}
+  h1,h2,h3{margin:0; letter-spacing:-.01em}
+  p{margin:0 0 1rem}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+  /* NAV */
+  header.nav{
+    position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
+    backdrop-filter:saturate(160%) blur(8px); border-bottom:1px solid var(--line);
+  }
+  .nav .wrap{display:flex; align-items:center; gap:20px; height:66px}
+  .brand{display:flex; align-items:center; gap:11px; text-decoration:none; font-weight:800}
+  .brand svg{width:38px; height:29px; color:var(--ink)}
+  .brand b{font-size:1.15rem; letter-spacing:.02em}
+  .brand span{font-weight:600; color:var(--muted); font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; display:none}
+  nav.links{margin-left:auto; display:flex; gap:26px; align-items:center}
+  nav.links a{text-decoration:none; font-weight:600; font-size:.82rem; letter-spacing:.06em; text-transform:uppercase; color:#333; padding:6px 0; border-bottom:2px solid transparent}
+  nav.links a:hover{border-bottom-color:var(--ink)}
+  nav.links a.cta{border:2px solid var(--ink); border-radius:2px; padding:9px 16px; color:var(--paper); background:var(--ink)}
+  nav.links a.cta:hover{background:var(--paper); color:var(--ink)}
+  .nav-toggle{display:none}
+  @media(max-width:820px){
+    nav.links{display:none}
+    .brand span{display:none}
+  }
+
+  /* HERO */
+  .hero{padding:76px 0 54px; border-bottom:3px solid var(--rule)}
+  .hero .lock{display:flex; align-items:center; gap:26px; flex-wrap:wrap}
+  .hero .mark{width:118px; height:90px; color:var(--ink); flex:0 0 auto}
+  .hero .title h1{font-size:clamp(2.6rem,7vw,4.6rem); font-weight:800; line-height:.92; letter-spacing:-.02em}
+  .hero .title .sub{font-size:clamp(1rem,2.6vw,1.5rem); font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#222; margin-top:10px}
+  .hero .def{margin-top:30px; max-width:760px}
+  .hero .def .k{font-size:.72rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--muted)}
+  .hero .def p{font-size:clamp(1.25rem,3.4vw,1.9rem); font-weight:600; line-height:1.3; margin:.4rem 0 0}
+  .hero .intro{margin-top:22px; max-width:720px; color:#333}
+  .hero .cta-row{margin-top:32px; display:flex; gap:14px; flex-wrap:wrap}
+  .btn{display:inline-block; text-decoration:none; font-weight:700; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; padding:14px 22px; border:2px solid var(--ink)}
+  .btn.solid{background:var(--ink); color:var(--paper)}
+  .btn.solid:hover{background:var(--paper); color:var(--ink)}
+  .btn.ghost:hover{background:var(--ink); color:var(--paper)}
+
+  /* SECTIONS */
+  section{padding:60px 0; border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:.72rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); margin-bottom:26px}
+  .badge-head{display:flex; align-items:center; gap:16px; margin-bottom:18px}
+  .badge{width:46px; height:46px; border-radius:50%; background:var(--ink); color:var(--paper); display:flex; align-items:center; justify-content:center; flex:0 0 auto}
+  .badge svg{width:24px; height:24px}
+  .badge-head h2{font-size:clamp(1.3rem,3.4vw,1.9rem); font-weight:800; text-transform:uppercase; letter-spacing:0}
+  .lead{max-width:820px; color:#2a2a2a; font-size:1.06rem}
+
+  .two{display:grid; grid-template-columns:1fr 1fr; gap:48px}
+  .three{display:grid; grid-template-columns:repeat(3,1fr); gap:40px}
+  @media(max-width:820px){.two,.three{grid-template-columns:1fr; gap:36px}}
+
+  ul.vals{list-style:none; margin:0; padding:0}
+  ul.vals li{position:relative; padding-left:26px; margin-bottom:16px; color:#2a2a2a}
+  ul.vals li::before{content:""; position:absolute; left:0; top:.62em; width:9px; height:9px; background:var(--ink); border-radius:50%}
+  ul.vals li b{font-weight:700}
+
+  /* NUMBERED PRINCIPLES */
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:30px 48px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .prin{display:flex; gap:18px; padding-bottom:6px}
+  .prin .no{font-size:1.5rem; font-weight:800; line-height:1; min-width:38px; font-variant-numeric:tabular-nums}
+  .prin h3{font-size:1.06rem; font-weight:800; margin-bottom:4px}
+  .prin p{color:#3a3a3a; margin:0; font-size:.98rem}
+
+  /* MANIFESTO CARDS 7-18 */
+  .cards{display:grid; grid-template-columns:1fr 1fr; gap:26px}
+  @media(max-width:820px){.cards{grid-template-columns:1fr}}
+  .card{border:1px solid var(--line); border-top:4px solid var(--ink); padding:26px 24px}
+  .card .ch{display:flex; align-items:center; gap:13px; margin-bottom:14px}
+  .card .n{width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex:0 0 auto}
+  .card .ic{width:24px;height:24px;color:var(--ink);flex:0 0 auto}
+  .card h3{font-size:1.02rem; font-weight:800; text-transform:uppercase; letter-spacing:.01em}
+  .card ul{list-style:none;margin:0;padding:0}
+  .card li{position:relative; padding-left:18px; margin-bottom:9px; color:#3a3a3a; font-size:.95rem; line-height:1.5}
+  .card li::before{content:""; position:absolute; left:0; top:.6em; width:6px; height:6px; background:#000; border-radius:50%}
+
+  /* PHILOSOPHY */
+  .philo{background:var(--ink); color:var(--paper); border:none}
+  .philo .badge{background:var(--paper); color:var(--ink)}
+  .philo .lines p{font-size:clamp(1.15rem,3vw,1.6rem); font-weight:600; line-height:1.4; max-width:900px; margin:0 0 .5rem}
+  .philo .lines .strong{font-weight:800}
+
+  /* COMMITMENT */
+  .commit .box{border:3px solid var(--ink); padding:34px 30px; max-width:900px}
+  .commit p{color:#222; font-size:1.05rem}
+  .commit p.first b{font-weight:800}
+
+  /* VISION BAND */
+  .vision .col h3{display:flex; align-items:center; gap:12px; font-size:.95rem; text-transform:uppercase; letter-spacing:.05em; margin-bottom:14px}
+  .vision .col h3 .badge{width:38px;height:38px}
+  .vision .col h3 .badge svg{width:20px;height:20px}
+  .vision .motto-lines{font-weight:800; line-height:1.5; font-size:1.02rem}
+  .vision p{color:#333; font-size:.98rem}
+
+  /* FINAL BANNER */
+  .banner{background:var(--ink); color:var(--paper); text-align:center; padding:44px 24px; border:none}
+  .banner .eq{font-size:clamp(.85rem,2.2vw,1.05rem); font-weight:700; letter-spacing:.08em; text-transform:uppercase; opacity:.85}
+  .banner .big{font-size:clamp(1.5rem,5vw,2.6rem); font-weight:800; text-transform:uppercase; letter-spacing:-.01em; margin-top:10px}
+
+  footer.foot{padding:34px 0; text-align:center; color:var(--muted); font-size:.82rem; border:none}
+  footer.foot .brand{justify-content:center; margin-bottom:12px}
+  footer.foot a{color:var(--muted)}
+
+  /* dark scheme adaptation (brand is monochrome, so invert cleanly) */
+  @media (prefers-color-scheme: dark){
+    :root{--paper:#0c0c0c; --ink:#f4f4f4; --muted:#9a9a9a; --line:#242424; --rule:#f4f4f4}
+    body{background:var(--paper); color:var(--ink)}
+    header.nav{background:rgba(12,12,12,.9); border-bottom-color:var(--line)}
+    nav.links a{color:#cfcfcf}
+    .card{border-color:var(--line)}
+    .lead,.prin p,.card li,.commit p,.vision p,.hero .intro{color:#c9c9c9}
+    .philo{background:#f4f4f4; color:#0c0c0c}
+    .philo .badge{background:#0c0c0c;color:#f4f4f4}
+    .philo .lines p{color:#0c0c0c}
+    .banner{background:#f4f4f4;color:#0c0c0c}
+    ul.vals li::before,.card li::before{background:currentColor}
+  }
+</style>
+</head>
+<body>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="s" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></g>
+  </defs>
+  <symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h12l-2.5 3.5L17 11H5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.4 20a5.6 5.6 0 0 1 11.2 0"/><path d="M16 5.5a2.6 2.6 0 0 1 0 5.2"/><path d="M17 14.5a5 5 0 0 1 3.6 5.5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S3.5 14.6 3.5 8.8C3.5 5.9 5.6 4 8 4c1.9 0 3.2 1.2 4 2.4C12.8 5.2 14.1 4 16 4c2.4 0 4.5 1.9 4.5 4.8 0 5.8-8.5 11.2-8.5 11.2z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.8-4.8"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M6 21h12"/><path d="M4.5 6.5h15"/><path d="M7.5 4.5l-3 6h6z"/><path d="M16.5 4.5l3 6h-6z" transform="translate(0 2)"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.2c0 4.7-3.2 7.9-7.5 9.3-4.3-1.4-7.5-4.6-7.5-9.3V6z"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-4 10 4-10 4z"/><path d="M6 11v4.2c0 1.6 2.7 2.8 6 2.8s6-1.2 6-2.8V11"/><path d="M22 9v5"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12h4l2-6 3.5 12 2.5-6h7"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.5" width="18" height="12.5" rx="1.6"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5"/><path d="M3 13h18"/></symbol>
+  <symbol id="i-medal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="5"/><path d="M8.5 2.5l3.5 6.5M15.5 2.5L12 9"/><path d="M12 13l.9 1.9 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2-1.5-1.4 2-.3z" stroke="none" fill="currentColor"/></symbol>
+  <symbol id="i-gavel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 4.5l6 6"/><path d="M16.2 7.2l-4.5 4.5"/><path d="M9.5 9.5l-6 6 3 3 6-6"/><path d="M4 21h9"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-4.5 4V16H4z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.6 2.5 2.6 14.5 0 17"/><path d="M12 3.5c-2.6 2.5-2.6 14.5 0 17"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M15.6 8.4l-2 5.2-5.2 2 2-5.2z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.8 6.3.7-4.7 4.3 1.3 6.2-5.6-3.2-5.6 3.2 1.3-6.2L3 9.5l6.3-.7z"/></symbol>
+</svg>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="XY Masculinism home">
+      <svg viewBox="0 0 210 160" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="27" stroke-linecap="butt" stroke-linejoin="miter"><path d="M18 24 L94 138"/><path d="M94 24 L18 138"/><path d="M140 138 L140 84 L106 40"/><path d="M140 84 L182 36"/></g><path d="M203 14 L176 22 L189 49 Z" fill="currentColor"/></svg>
+      <b>XY</b><span>Masculinism</span>
+    </a>
+    <nav class="links">
+      <a href="#reclaiming">About</a>
+      <a href="#principles">Principles</a>
+      <a href="#manifesto">Manifesto</a>
+      <a href="#vision">Vision</a>
+      <a class="cta" href="#commitment">Our Commitment</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="border-bottom:3px solid var(--rule)">
+    <div class="wrap">
+      <div class="lock">
+        <svg class="mark" viewBox="0 0 210 160" fill="none" aria-label="XY logo"><g stroke="currentColor" stroke-width="27" stroke-linecap="butt" stroke-linejoin="miter"><path d="M18 24 L94 138"/><path d="M94 24 L18 138"/><path d="M140 138 L140 84 L106 40"/><path d="M140 84 L182 36"/></g><path d="M203 14 L176 22 L189 49 Z" fill="currentColor"/></svg>
+        <div class="title">
+          <h1>MASCULINISM</h1>
+          <div class="sub">The Advocacy of Men's Rights</div>
+        </div>
+      </div>
+
+      <div class="def">
+        <div class="k">Definition</div>
+        <p>The advocacy of men's rights &mdash; grounded in equal rights, equal responsibilities, equal opportunities and equal protections under the law.</p>
+      </div>
+
+      <p class="intro">Our mission is to promote equal rights, responsibilities, opportunities and protections under the law, while addressing issues that uniquely or disproportionately affect men. Together we build a fairer, more just world for all.</p>
+
+      <div class="cta-row">
+        <a class="btn solid" href="#manifesto">Read the Manifesto</a>
+        <a class="btn ghost" href="#principles">Core Principles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECLAIMING + WHO WE REPRESENT -->
+  <section id="reclaiming">
+    <div class="wrap two">
+      <div>
+        <div class="badge-head"><span class="badge"><svg><use href="#i-flag"/></svg></span><h2>Reclaiming Masculinism</h2></div>
+        <p class="lead">The movement holds that the term &ldquo;Masculinism&rdquo; has been widely mischaracterized and associated with extremist views that do not represent its principles. It seeks to reclaim the term and define it according to its original purpose: the advocacy of men's rights, grounded in equal rights, equal responsibilities, equal opportunities, and equal protections under the law.</p>
+      </div>
+      <div>
+        <div class="badge-head"><span class="badge"><svg><use href="#i-users"/></svg></span><h2>Who We Represent</h2></div>
+        <p class="lead">Masculinism is a movement for humans that are biologically XY and identify as heterosexual men. It exists to advocate for their rights, interests, and equal treatment under the law.</p>
+        <p class="lead">The movement welcomes support from anyone who shares its principles, but its primary focus is on addressing issues that uniquely or disproportionately affect this constituency.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES + RESEARCH/HEALTH -->
+  <section id="values">
+    <div class="wrap two">
+      <div>
+        <div class="badge-head"><span class="badge"><svg><use href="#i-heart"/></svg></span><h2>Values</h2></div>
+        <ul class="vals">
+          <li><b>Provide for and protect</b>, with particular care for the vulnerable, including children and mothers.</li>
+          <li><b>Defend the family unit</b> and support the right of mothers who choose to be homemakers and educators of their children to do so without discrimination.</li>
+          <li>The movement has <b>no religious affiliation</b> and is <b>secular (laic)</b> at its core.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="badge-head"><span class="badge"><svg><use href="#i-search"/></svg></span><h2>Research &amp; Health Priority</h2></div>
+        <ul class="vals">
+          <li>Investigate the reported decline in male fertility and testosterone levels, and support research into their causes and evidence-based ways to protect and improve men's reproductive health and overall well-being.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE PRINCIPLES 1-6 -->
+  <section id="principles">
+    <div class="wrap">
+      <div class="badge-head"><span class="badge"><svg><use href="#i-scale"/></svg></span><h2>Core Principles</h2></div>
+      <div class="grid">
+        <div class="prin"><div class="no">1</div><div><h3>Legal Equality</h3><p>Ensure men and women are equal before the law in all areas.</p></div></div>
+        <div class="prin"><div class="no">2</div><div><h3>Equal Responsibilities</h3><p>Promote fairness in the distribution of responsibilities in society, including parental, financial, and civic duties.</p></div></div>
+        <div class="prin"><div class="no">3</div><div><h3>Equal Opportunities</h3><p>Support men's access to education, employment, and advancement without discrimination.</p></div></div>
+        <div class="prin"><div class="no">4</div><div><h3>Equal Protections</h3><p>Ensure men receive equal protection under the law, including in areas of family law, mental health, and workplace rights.</p></div></div>
+        <div class="prin"><div class="no">5</div><div><h3>Evidence-Based Advocacy</h3><p>Base policy positions on data, research, and reason rather than ideology or emotion.</p></div></div>
+        <div class="prin"><div class="no">6</div><div><h3>Peaceful and Lawful</h3><p>Pursue our goals through peaceful, democratic, and lawful means.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO 7-18 -->
+  <section id="manifesto">
+    <div class="wrap">
+      <div class="eyebrow">The Manifesto &mdash; a continuation of our principles, values and goals</div>
+      <div class="cards">
+
+        <div class="card">
+          <div class="ch"><span class="n">7</span><svg class="ic"><use href="#i-scale"/></svg><h3>Equality Before the Law</h3></div>
+          <ul>
+            <li>No law, policy, or social expectation should discriminate against anyone based solely on sex.</li>
+            <li>Equal standards. Equal treatment. Equal accountability.</li>
+            <li>We oppose all forms of legal bias for or against any sex.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="ch"><span class="n">8</span><svg class="ic"><use href="#i-users"/></svg><h3>Family and Parenting</h3></div>
+          <ul>
+            <li>Support the family as the fundamental building block of society.</li>
+            <li>Shared parenting as the legal presumption.</li>
+            <li>Equal parental rights and responsibilities.</li>
+            <li>Protect children's right to frequent and meaningful relationships with both parents.</li>
+            <li>Oppose parental alienation and unjust custody decisions.</li>
+            <li>Support the right of mothers who choose to be homemakers and educators without discrimination or social penalty.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="ch"><span class="n">9</span><svg class="ic"><use href="#i-shield"/></svg><h3>Criminal Justice Reform</h3></div>
+          <ul>
+            <li>Ensure equal protection for male victims of violence, abuse and exploitation.</li>
+            <li>Gender-neutral laws that recognize all victims.</li>
+            <li>Equal sentencing for equal crimes.</li>
+            <li>Recognize emotional abuse and coercive control against men.</li>
+            <li>Penalties for knowingly false accusations proportionate to the harm caused.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="ch"><span class="n">10</span><svg class="ic"><use href="#i-cap"/></svg><h3>Education and Boys</h3></div>
+          <ul>
+            <li>Address the educational challenges boys face through early intervention and support.</li>
+            <li>Promote mentoring, literacy, and numeracy programs.</li>
+            <li>Encourage male role models and teachers.</li>
+            <li>Expand access to vocational, technical and practical education.</li>
+            <li>Education policy must respond to need, not ideology.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="ch"><span class="n">11</span><svg class="ic"><use href="#i-pulse"/></svg><h3>Men's Health Priority</h3></div>
+          <ul>
+            <li>Investigate and address the decline in male fertility and testosterone.</li>
+            <li>Increase research into causes, prevention and treatment.</li>
+            <li>Prioritize men's mental health and suicide prevention.</li>
+            <li>Raise awareness and fund research for prostate and testicular cancer.</li>
+            <li>Study environmental toxins, lifestyle factors, and other drivers of poor male health outcomes.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="ch"><span class="n">12</span><svg class="ic"><use href="#i-briefcase"/></svg><h3>Work, Economy and Fairness</h3></div>
+          <ul>
+            <li>End discrimination in hiring, promotion, pay and retention.</li>
+            <li>Recognize and value male-dominated essential work.</li>
+            <li>Support entrepreneurship, financial literacy and economic opportunity for men.</li>
+            <li>Reform welfare systems that disincentivize work and fatherhood.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="ch"><span class="n">13</span><svg class="ic"><use href="#i-medal"/></svg><h3>National Service and Sacrifice</h3></div>
+          <ul>
+            <li>If military service is compulsory, it must apply equally to men and women.</li>
+            <li>Recognize and honor all who serve and protect.</li>
+            <li>Ensure veterans receive the care and respect they deserve.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="ch"><span class="n">14</span><svg class="ic"><use href="#i-gavel"/></svg><h3>Protection from Legal Abuse</h3></div>
+          <ul>
+            <li>Protect men from paternity fraud and reproductive fraud.</li>
+            <li>Mandatory DNA testing at birth when paternity is in question.</li>
+            <li>Reform restraining order laws to prevent misuse.</li>
+            <li>Ensure due process and presumption of innocence for all men.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="ch"><span class="n">15</span><svg class="ic"><use href="#i-chat"/></svg><h3>Freedoms and Rights</h3></div>
+          <ul>
+            <li>Freedom of speech, thought, association and conscience.</li>
+            <li>Freedom from censorship and ideological coercion.</li>
+            <li>The right to be heard, disagree, and participate in public life.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="ch"><span class="n">16</span><svg class="ic"><use href="#i-globe"/></svg><h3>Research, Data and Transparency</h3></div>
+          <ul>
+            <li>Collect and publish sex-disaggregated data in all key areas of life.</li>
+            <li>Base policy on evidence, not ideology.</li>
+            <li>Support independent research into issues affecting men.</li>
+            <li>Promote open debate and intellectual honesty.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDING PHILOSOPHY (17) -->
+  <section class="philo" id="philosophy">
+    <div class="wrap">
+      <div class="badge-head"><span class="badge"><svg><use href="#i-compass"/></svg></span><h2>17 &mdash; Our Guiding Philosophy</h2></div>
+      <div class="lines">
+        <p>Rights cannot exist without responsibilities.</p>
+        <p>Equality cannot exist without reciprocity.</p>
+        <p>Justice cannot exist with double standards.</p>
+        <p class="strong">Strong men protect society not because they are forced to, but because they choose to.</p>
+        <p>We build. We provide. We protect. We lead. We take responsibility. We earn respect. We fight for justice. We stand for truth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMITMENT (18) -->
+  <section class="commit" id="commitment">
+    <div class="wrap">
+      <div class="badge-head"><span class="badge"><svg><use href="#i-star"/></svg></span><h2>18 &mdash; Our Commitment</h2></div>
+      <div class="box">
+        <p class="first"><b>We are committed</b> to peaceful, democratic and lawful advocacy for the rights and well-being of men.</p>
+        <p>We reject hatred, violence and extremism.</p>
+        <p>We seek partnerships with anyone who shares our commitment to fairness, truth and justice.</p>
+        <p style="margin-bottom:0">We judge ideas by their merit, not the gender of those who express them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOTTO / VISION / TOGETHER -->
+  <section class="vision" id="vision">
+    <div class="wrap three">
+      <div class="col">
+        <h3><span class="badge"><svg><use href="#i-flag"/></svg></span>Our Motto</h3>
+        <div class="motto-lines">Equal Rights.<br>Equal Responsibilities.<br>Equal Opportunities.<br>Equal Protections.</div>
+      </div>
+      <div class="col">
+        <h3><span class="badge"><svg><use href="#i-target"/></svg></span>Our Vision</h3>
+        <p>A world where every man can live with dignity, purpose and hope. A world where families thrive, communities are strong, and justice is blind to gender. A world where future generations inherit freedom, opportunity and a fair chance to succeed.</p>
+      </div>
+      <div class="col">
+        <h3><span class="badge"><svg><use href="#i-users"/></svg></span>Together</h3>
+        <p>We build the future. We defend what is right. We leave a legacy of strength, honor and integrity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL BANNER -->
+  <section class="banner">
+    <div class="eq">Equal Rights &bull; Equal Responsibilities &bull; Equal Opportunities &bull; Equal Protections</div>
+    <div class="big">A Just World for All.<br>A Better World Because Men Matter.</div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="XY">
+      <svg viewBox="0 0 210 160" fill="none" aria-hidden="true" style="width:34px;height:26px"><g stroke="currentColor" stroke-width="27" stroke-linecap="butt" stroke-linejoin="miter"><path d="M18 24 L94 138"/><path d="M94 24 L18 138"/><path d="M140 138 L140 84 L106 40"/><path d="M140 84 L182 36"/></g><path d="M203 14 L176 22 L189 49 Z" fill="currentColor"/></svg>
+    </a>
+    <p>XY Masculinism &mdash; The Advocacy of Men's Rights. Secular. Peaceful. Lawful.</p>
+    <p>&copy; <span id="yr"></span> XY Masculinism. A just world for all.</p>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
